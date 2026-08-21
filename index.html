@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0B0D12" />
+  <title>Jorge Luis Santiesteban Ávila — Data Engineer & Cloud Architect</title>
+  <meta name="description"
+    content="Ingeniero de Datos & Arquitecto Cloud especializado en pipelines ETL/ELT, arquitectura Medallion, Databricks, BigQuery, AWS, GCP, Azure y Power BI." />
+  <meta name="author" content="Jorge Luis Santiesteban Ávila" />
+
+  <!-- Google Fonts: Outfit + JetBrains Mono + Fraunces (serif accent like Ian's) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ─── FONDO ─── -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="bg-radial-glow"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-fade-bottom"></div>
+
+  <!-- ─── NAVBAR ─── -->
+  <header class="nav-header" id="nav-header">
+    <nav class="nav-pill">
+      <a href="#top" class="nav-logo">
+        <span class="gradient-ring">
+          <img src="perfil.jpg" alt="Jorge Luis Santiesteban" class="nav-avatar" />
+        </span>
+        <span class="nav-name">Jorge Santiesteban</span>
+      </a>
+
+      <div class="nav-center">
+        <a href="#about" class="nav-link">Sobre mí</a>
+        <a href="#experience" class="nav-link">Experiencia</a>
+        <a href="#projects" class="nav-link">Proyectos</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contacto</a>
+      </div>
+
+      <div class="nav-end">
+        <a href="jorge-santiesteban-cv.pdf" class="btn-primary btn-sm" download>
+          <i class="fas fa-download"></i> Descargar CV
+        </a>
+        <button id="mobile-menu-btn" class="btn-icon btn-mobile" aria-label="Menú">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <button id="mobile-close-btn" class="btn-icon mobile-close"><i class="fas fa-times"></i></button>
+    <nav class="mobile-nav">
+      <a href="#about" class="mobile-link">Sobre mí</a>
+      <a href="#experience" class="mobile-link">Experiencia</a>
+      <a href="#projects" class="mobile-link">Proyectos</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#contact" class="mobile-link">Contacto</a>
+      <a href="jorge-santiesteban-cv.pdf" class="btn-primary" download style="margin-top:1rem;">
+        <i class="fas fa-download"></i> Descargar CV
+      </a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ════════════════ HERO ════════════════ -->
+    <section id="top" class="hero">
+      <div class="hero-inner anim" data-delay="0">
+
+        <div class="pill-badge anim" data-delay="100">
+          <span class="ping-dot"><span></span></span>
+          Disponible para proyectos y consultoría
+        </div>
+
+        <p class="hero-greeting anim" data-delay="200">
+          <i class="fas fa-database icon-cyan"></i>
+          Hola, soy Jorge Luis Santiesteban Ávila
+        </p>
+
+        <h1 class="hero-title anim" data-delay="300">
+          Convierto <span class="text-gradient">datos masivos</span><br class="hide-mobile" />
+          en arquitecturas que escalan.
+        </h1>
+
+        <p class="hero-desc anim" data-delay="400">
+          Ingeniero de Datos Senior especializado en pipelines ETL/ELT de alto volumen,
+          arquitectura Medallion en Databricks, entornos multi-cloud (AWS · GCP · Azure) y
+          analítica avanzada con Power BI.
+        </p>
+
+        <div class="hero-actions anim" data-delay="500">
+          <a href="#contact" class="btn-primary">
+            Hablemos <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#projects" class="btn-ghost">
+            Ver proyectos
+          </a>
+          <div class="social-row">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-icon"
+              aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:santiestebanjorge94@gmail.com" class="btn-icon" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bento métricas -->
+        <div class="stats-grid anim" data-delay="600">
+          <div class="stat-cell">
+            <div class="stat-val"><span class="tabular-nums">+10M</span></div>
+            <div class="stat-label">registros / día procesados</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-val"><span class="tabular-nums">3</span> Clouds</div>
+            <div class="stat-label">AWS · GCP · Azure</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-val">Bronze→Gold</div>
+            <div class="stat-label">Arquitectura Medallion</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-val"><span class="tabular-nums">+6</span> años</div>
+            <div class="stat-label">experiencia en Data Engineering</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll">
+        <span>Scroll</span>
+        <i class="fas fa-arrow-down"></i>
+      </a>
+    </section>
+
+    <!-- ════════════════ SOBRE MÍ ════════════════ -->
+    <section id="about" class="section scroll-mt">
+      <div class="wrap">
+        <div class="about-grid">
+
+          <!-- Left column -->
+          <div>
+            <!-- Profile -->
+            <div class="about-profile anim">
+              <div class="gradient-ring gradient-ring-lg">
+                <img src="perfil.jpg" alt="Jorge Luis Santiesteban" class="about-avatar" />
+              </div>
+              <div>
+                <p class="about-name">Jorge Luis Santiesteban</p>
+                <p class="about-role">Senior Data Engineer</p>
+                <p class="about-loc"><i class="fas fa-map-marker-alt"></i> Ciudad de México, México</p>
+              </div>
+            </div>
+
+            <!-- Heading -->
+            <div class="anim">
+              <div class="eyebrow"><span class="eyebrow-line"></span>Sobre mí</div>
+              <h2 class="section-heading">Donde los datos, la arquitectura y el negocio se encuentran</h2>
+            </div>
+
+            <!-- Body -->
+            <div class="about-body anim">
+              <p>Especialista en diseñar e implementar <strong>pipelines de datos robustos</strong>, modelado
+                dimensional y relacional, y procesamiento distribuido a escala empresarial. Procesando más de
+                <strong>10M de registros diarios</strong> bajo arquitectura Medallion en Databricks y Azure Synapse.</p>
+              <p>Mi objetivo: garantizar que la información fluya desde fuentes heterogéneas —APIs, SQL/NoSQL, archivos
+                planos— hasta dashboards ejecutivos, con trazabilidad, gobernanza y automatización total bajo prácticas
+                <strong>DataOps & DevOps</strong>.</p>
+            </div>
+
+            <!-- Education -->
+            <div class="about-edu anim">
+              <div class="edu-head"><i class="fas fa-graduation-cap icon-indigo"></i> Educación</div>
+              <div class="card-mini">
+                <p class="card-mini-title">Ingeniería en Sistemas Computacionales</p>
+                <p class="card-mini-sub">Instituto Tecnológico de Culiacán</p>
+              </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="about-lang anim">
+              <i class="fas fa-language icon-cyan"></i>
+              <span><strong>Idiomas:</strong> Español (Nativo) · Inglés (B2)</span>
+            </div>
+
+            <!-- Quote -->
+            <div class="about-quote anim">
+              <p>"Construyo arquitecturas resilientes que convierten información compleja en valor de negocio medible."
+              </p>
+            </div>
+          </div>
+
+          <!-- Right column: Terminal -->
+          <div class="about-terminal-wrap anim">
+            <div class="terminal border-gradient">
+              <div class="terminal-bar">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="terminal-title">jorge@portfolio: ~/about</span>
+              </div>
+              <pre class="terminal-body"><code id="terminal-code"></code><span class="cursor-blink">▋</span></pre>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════ EXPERIENCIA ════════════════ -->
+    <section id="experience" class="section scroll-mt">
+      <div class="wrap">
+        <div class="section-header anim">
+          <div class="eyebrow"><span class="eyebrow-line"></span>Trayectoria</div>
+          <h2 class="section-heading">Experiencia Profesional</h2>
+          <p class="section-desc">Roles donde he llevado arquitecturas de datos a producción empresarial.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-line"></div>
+
+          <!-- Profuturo -->
+          <div class="tl-entry anim">
+            <span class="tl-dot bg-indigo"></span>
+            <div class="card tl-card">
+              <div class="tl-header">
+                <h3 class="tl-role">Ingeniero Arquitecto de Datos</h3>
+                <span class="tl-date">Jul 2025 — Presente</span>
+              </div>
+              <div class="tl-company">
+                <span class="text-indigo fw-600">Profuturo de GNP</span>
+                <span class="tl-location"><i class="fas fa-map-pin"></i> Ciudad de México</span>
+              </div>
+              <ul class="tl-list">
+                <li><span class="tl-bullet bg-indigo"></span>Diseño de pipelines en <strong>Databricks</strong> para
+                  +10M de registros diarios desde fuentes heterogéneas.</li>
+                <li><span class="tl-bullet bg-indigo"></span>Implementación de <strong>Arquitectura Medallion</strong>
+                  (Bronze, Silver, Gold), modelado dimensional y ETL/ELT.</li>
+                <li><span class="tl-bullet bg-indigo"></span>Integración de fuentes via APIs REST, archivos planos y
+                  bases de datos relacionales/NoSQL.</li>
+                <li><span class="tl-bullet bg-indigo"></span>Automatización y validación de calidad bajo prácticas
+                  <strong>DataOps y DevOps</strong>.</li>
+                <li><span class="tl-bullet bg-indigo"></span>Reportes ejecutivos y KPIs en <strong>Power BI</strong>
+                  para la alta dirección.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Salud Digna -->
+          <div class="tl-entry anim">
+            <span class="tl-dot bg-cyan"></span>
+            <div class="card tl-card">
+              <div class="tl-header">
+                <h3 class="tl-role">Ingeniero de Datos Senior</h3>
+                <span class="tl-date">Ene 2024 — Jun 2025</span>
+              </div>
+              <div class="tl-company">
+                <span class="text-cyan fw-600">Salud Digna</span>
+                <span class="tl-location"><i class="fas fa-map-pin"></i> Ciudad de México</span>
+              </div>
+              <ul class="tl-list">
+                <li><span class="tl-bullet bg-cyan"></span>Pipelines ETL/ELT en Pentaho, SSIS y <strong>Azure Synapse
+                    Analytics</strong> (+10M registros/día).</li>
+                <li><span class="tl-bullet bg-cyan"></span>Notebooks en Azure Synapse para transformación y análisis
+                  masivo.</li>
+                <li><span class="tl-bullet bg-cyan"></span>Modelado de colecciones en <strong>MongoDB</strong> para
+                  consultas de baja latencia.</li>
+                <li><span class="tl-bullet bg-cyan"></span>Integración multi-cloud híbrida: AWS RDS, Amazon S3, GCP y
+                  Azure Synapse.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Rafael Dondé -->
+          <div class="tl-entry anim">
+            <span class="tl-dot bg-indigo"></span>
+            <div class="card tl-card">
+              <div class="tl-header">
+                <h3 class="tl-role">Ingeniero de Datos Senior</h3>
+                <span class="tl-date">Jul 2022 — Ene 2024</span>
+              </div>
+              <div class="tl-company">
+                <span class="text-indigo fw-600">Fundación Rafael Dondé</span>
+              </div>
+              <ul class="tl-list">
+                <li><span class="tl-bullet bg-indigo"></span>Migración a <strong>AWS</strong> con AWS DMS y
+                  automatización con Python y Pentaho.</li>
+                <li><span class="tl-bullet bg-indigo"></span>Flujos de conciliación automática en SQL Server, PostgreSQL
+                  y MongoDB con Webhooks.</li>
+                <li><span class="tl-bullet bg-indigo"></span>Microservicios y consumo de APIs REST (GET, POST, PUT,
+                  DELETE).</li>
+                <li><span class="tl-bullet bg-indigo"></span>Tableros gerenciales en Power BI y reportes automatizados
+                  en SSRS.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Coppel -->
+          <div class="tl-entry anim">
+            <span class="tl-dot bg-cyan"></span>
+            <div class="card tl-card">
+              <div class="tl-header">
+                <h3 class="tl-role">Ingeniero de Datos Junior</h3>
+                <span class="tl-date">Feb 2020 — Jun 2022</span>
+              </div>
+              <div class="tl-company">
+                <span class="text-cyan fw-600">Coppel SA de CV</span>
+              </div>
+              <ul class="tl-list">
+                <li><span class="tl-bullet bg-cyan"></span>Modelos analíticos y dashboards con KPIs en Power BI.</li>
+                <li><span class="tl-bullet bg-cyan"></span>ETL con SSIS e integración directa con <strong>Google Cloud
+                    Platform (GCP)</strong>.</li>
+                <li><span class="tl-bullet bg-cyan"></span>Extracción y consultas en <strong>Google BigQuery</strong>
+                  para el Data Warehouse.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Sukarne -->
+          <div class="tl-entry anim">
+            <span class="tl-dot bg-indigo"></span>
+            <div class="card tl-card">
+              <div class="tl-header">
+                <h3 class="tl-role">Ingeniero de Datos Junior</h3>
+                <span class="tl-date">Mar 2019 — Ene 2020</span>
+              </div>
+              <div class="tl-company">
+                <span class="text-indigo fw-600">Sukarne SA de CV</span>
+              </div>
+              <ul class="tl-list">
+                <li><span class="tl-bullet bg-indigo"></span>ETL del Data Warehouse en Databricks y BigQuery.</li>
+                <li><span class="tl-bullet bg-indigo"></span>Flujos de integración con <strong>Informatica PowerCenter
+                    (IPC)</strong>.</li>
+                <li><span class="tl-bullet bg-indigo"></span>KPIs operativos y reportes en SAP BO y Power BI.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════ PROYECTOS ════════════════ -->
+    <section id="projects" class="section scroll-mt">
+      <div class="wrap">
+        <div class="section-header anim">
+          <div class="eyebrow"><span class="eyebrow-line"></span>Casos destacados</div>
+          <h2 class="section-heading">Proyectos con impacto medible</h2>
+          <p class="section-desc">Selección de trabajos donde la ingeniería de datos se tradujo en resultados de
+            negocio.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <div class="anim">
+            <div class="card proj-card border-gradient">
+              <div class="proj-top">
+                <div>
+                  <div class="proj-metric text-indigo"><span class="tabular-nums">0</span> downtime</div>
+                  <p class="proj-metric-label">Impacto: migración sin interrupciones</p>
+                </div>
+                <svg class="sparkline" viewBox="0 0 120 48" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="sl1" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#8b5cf6" />
+                      <stop offset="100%" stop-color="#a78bfa" />
+                    </linearGradient>
+                    <linearGradient id="sa1" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#8b5cf6" stop-opacity=".25" />
+                      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,42 L20,35 L40,26 L60,18 L80,10 L100,5 L120,3 L120,48 L0,48Z" fill="url(#sa1)" />
+                  <path d="M0,42 L20,35 L40,26 L60,18 L80,10 L100,5 L120,3" fill="none" stroke="url(#sl1)"
+                    stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="proj-body">
+                <h3 class="proj-title">Migración Integral a AWS</h3>
+                <p class="proj-desc">Planificación, ejecución y validación de la migración de bases de datos y
+                  microservicios críticos hacia AWS con AWS DMS y Amazon S3, garantizando cero downtime.</p>
+              </div>
+              <div class="tag-wrap">
+                <span class="tag tag-indigo">AWS DMS</span><span class="tag tag-indigo">Amazon S3</span><span
+                  class="tag tag-indigo">AWS RDS</span><span class="tag tag-indigo">Python</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="anim">
+            <div class="card proj-card border-gradient">
+              <div class="proj-top">
+                <div>
+                  <div class="proj-metric text-cyan"><span class="tabular-nums">-25</span>% costos</div>
+                  <p class="proj-metric-label">Impacto: reducción FinOps · Cloud</p>
+                </div>
+                <svg class="sparkline" viewBox="0 0 120 48" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="sl2" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#06b6d4" />
+                      <stop offset="100%" stop-color="#22d3ee" />
+                    </linearGradient>
+                    <linearGradient id="sa2" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#06b6d4" stop-opacity=".25" />
+                      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,8 L20,14 L40,20 L60,26 L80,32 L100,38 L120,44 L120,48 L0,48Z" fill="url(#sa2)" />
+                  <path d="M0,8 L20,14 L40,20 L60,26 L80,32 L100,38 L120,44" fill="none" stroke="url(#sl2)"
+                    stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="proj-body">
+                <h3 class="proj-title">Tableros FinOps en Power BI</h3>
+                <p class="proj-desc">Automatización y modelado de datos de consumo multi-cloud. Reportes diarios con
+                  desglose por servicio, recurso y proyecto para gestión financiera a nivel gerencial.</p>
+              </div>
+              <div class="tag-wrap">
+                <span class="tag tag-cyan">Power BI</span><span class="tag tag-cyan">FinOps</span><span
+                  class="tag tag-cyan">Multi-Cloud</span><span class="tag tag-cyan">DAX / SQL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="anim">
+            <div class="card proj-card border-gradient">
+              <div class="proj-top">
+                <div>
+                  <div class="proj-metric text-indigo"><span class="tabular-nums">+10M</span>/día</div>
+                  <p class="proj-metric-label">Impacto: orquestación automatizada</p>
+                </div>
+                <svg class="sparkline" viewBox="0 0 120 48" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="sl3" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#10b981" />
+                      <stop offset="100%" stop-color="#34d399" />
+                    </linearGradient>
+                    <linearGradient id="sa3" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#10b981" stop-opacity=".25" />
+                      <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,40 L24,32 L48,24 L72,16 L96,8 L120,3 L120,48 L0,48Z" fill="url(#sa3)" />
+                  <path d="M0,40 L24,32 L48,24 L72,16 L96,8 L120,3" fill="none" stroke="url(#sl3)" stroke-width="2"
+                    stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="proj-body">
+                <h3 class="proj-title">Pipelines en Azure Data Factory</h3>
+                <p class="proj-desc">Implementación de pipelines escalables para actualización automática de reportes
+                  operativos y financieros en tiempo real con alertas proactivas ante fallos.</p>
+              </div>
+              <div class="tag-wrap">
+                <span class="tag tag-indigo">Azure Data Factory</span><span class="tag tag-indigo">Azure
+                  Synapse</span><span class="tag tag-indigo">DataOps</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="anim">
+            <div class="card proj-card border-gradient">
+              <div class="proj-top">
+                <div>
+                  <div class="proj-metric text-cyan"><span class="tabular-nums">100</span>% exactitud</div>
+                  <p class="proj-metric-label">Impacto: conciliación con Webhooks</p>
+                </div>
+                <svg class="sparkline" viewBox="0 0 120 48" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="sl4" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#8b5cf6" />
+                      <stop offset="100%" stop-color="#22d3ee" />
+                    </linearGradient>
+                    <linearGradient id="sa4" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#8b5cf6" stop-opacity=".25" />
+                      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,36 L24,28 L48,20 L72,14 L96,8 L120,4 L120,48 L0,48Z" fill="url(#sa4)" />
+                  <path d="M0,36 L24,28 L48,20 L72,14 L96,8 L120,4" fill="none" stroke="url(#sl4)" stroke-width="2"
+                    stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="proj-body">
+                <h3 class="proj-title">Homologación y Conciliación de Ventas</h3>
+                <p class="proj-desc">Diseño de conciliación continua con Webhooks, MongoDB y SQL Server, estandarizando
+                  transacciones y reportería financiera con exactitud del 100%.</p>
+              </div>
+              <div class="tag-wrap">
+                <span class="tag tag-cyan">Webhooks</span><span class="tag tag-cyan">MongoDB</span><span
+                  class="tag tag-cyan">SQL Server</span><span class="tag tag-cyan">APIs REST</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════ SKILLS ════════════════ -->
+    <section id="skills" class="section scroll-mt">
+      <div class="wrap">
+        <div class="section-header anim">
+          <div class="eyebrow"><span class="eyebrow-line"></span>Stack Tecnológico</div>
+          <h2 class="section-heading">Habilidades & Certificaciones</h2>
+          <p class="section-desc">Tecnologías, plataformas cloud y metodologías dominadas a lo largo de mi carrera.</p>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skills-main">
+            <div class="card skill-card anim">
+              <h3 class="skill-cat-head"><i class="fas fa-code icon-cyan"></i> Lenguajes</h3>
+              <div class="pill-wrap">
+                <span class="pill">Python (Avanzado)</span>
+                <span class="pill">SQL (Avanzado)</span>
+                <span class="pill">Java</span>
+                <span class="pill">R</span>
+                <span class="pill">React</span>
+                <span class="pill">HTML / JS</span>
+              </div>
+            </div>
+
+            <div class="card skill-card anim">
+              <h3 class="skill-cat-head"><i class="fas fa-cloud icon-cyan"></i> Cloud & Plataformas</h3>
+              <div class="pill-wrap">
+                <span class="pill">Databricks</span>
+                <span class="pill">Google BigQuery (GCP)</span>
+                <span class="pill">Azure Synapse</span>
+                <span class="pill">Azure Data Factory</span>
+                <span class="pill">AWS (RDS · S3 · DMS)</span>
+                <span class="pill">Arquitectura Medallion</span>
+              </div>
+            </div>
+
+            <div class="card skill-card anim">
+              <h3 class="skill-cat-head"><i class="fas fa-database icon-cyan"></i> Bases de Datos & ETL</h3>
+              <div class="pill-wrap">
+                <span class="pill">SQL Server</span>
+                <span class="pill">PostgreSQL</span>
+                <span class="pill">MySQL</span>
+                <span class="pill">MongoDB</span>
+                <span class="pill">Oracle</span>
+                <span class="pill">Pentaho</span>
+                <span class="pill">SSIS</span>
+                <span class="pill">Airflow</span>
+                <span class="pill">Informatica IPC</span>
+              </div>
+            </div>
+
+            <div class="card skill-card anim">
+              <h3 class="skill-cat-head"><i class="fas fa-chart-bar icon-cyan"></i> Visualización & DevOps</h3>
+              <div class="pill-wrap">
+                <span class="pill">Power BI (DAX)</span>
+                <span class="pill">SSRS</span>
+                <span class="pill">SAP BO</span>
+                <span class="pill">Git / GitHub</span>
+                <span class="pill">DataOps & DevOps</span>
+                <span class="pill">APIs REST</span>
+                <span class="pill">JIRA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-side">
+            <div class="card cert-card anim">
+              <h3 class="skill-cat-head"><i class="fas fa-certificate icon-indigo"></i> Certificaciones</h3>
+              <div class="cert-list">
+                <div class="cert-row"><i class="fas fa-award"></i> Databricks Certified</div>
+                <div class="cert-row"><i class="fab fa-aws"></i> Amazon Web Services</div>
+                <div class="cert-row"><i class="fas fa-leaf"></i> MongoDB</div>
+                <div class="cert-row"><i class="fas fa-sync-alt"></i> DataOps & DevOps</div>
+                <div class="cert-row"><i class="fas fa-cloud-upload-alt"></i> Migraciones de Nube</div>
+                <div class="cert-row"><i class="fas fa-chart-bar"></i> Power BI</div>
+                <div class="cert-row"><i class="fab fa-python"></i> Python Avanzado</div>
+                <div class="cert-row"><i class="fas fa-server"></i> SQL Server Mgmt</div>
+                <div class="cert-row"><i class="fas fa-network-wired"></i> APIs REST</div>
+                <div class="cert-row"><i class="fab fa-google"></i> Google Analytics</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════ CONTACTO ════════════════ -->
+    <section id="contact" class="section scroll-mt">
+      <div class="wrap">
+        <div class="card contact-card border-gradient anim">
+          <div class="eyebrow"><span class="eyebrow-line"></span>¿Hablamos?</div>
+          <h2 class="contact-heading">Iniciemos un Proyecto Juntos</h2>
+          <p class="contact-desc">Si buscas un Ingeniero de Datos con experiencia probada en arquitecturas escalables,
+            Databricks y Cloud, contáctame directamente.</p>
+
+          <div class="contact-btns">
+            <button id="copy-email-btn" class="contact-btn">
+              <i class="fas fa-envelope"></i>
+              <span>santiestebanjorge94@gmail.com</span>
+            </button>
+            <a href="https://wa.me/525591644453" target="_blank" rel="noopener noreferrer" class="contact-btn">
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp · +52 55 9164 4453</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-btn">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="jorge-santiesteban-cv.pdf" class="btn-primary" download>
+              <i class="fas fa-file-pdf"></i> Descargar CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p>© 2026 Jorge Luis Santiesteban Ávila</p>
+      <p>Data Engineer · Cloud Architect · CDMX</p>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast" class="toast">
+    <i class="fas fa-check-circle"></i>
+    <span id="toast-msg">¡Copiado al portapapeles!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
